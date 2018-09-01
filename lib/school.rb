@@ -3,28 +3,28 @@ class School
 
   def initialize(name)
     @name = name
-    @roster = {}
+    roster = {}
   end
 
   def add_student(name, grade)
-    if @roster[grade] = nil
-      @roster[grade] = []
+    if roster[grade] = nil
+      roster[grade] = []
     end
-    @roster[grade] << name
+    roster[grade] << name
   end
 
   def roster
-    @roster
+    roster
   end
 
   def grade(grade)
-    @roster[grade]
+    roster[grade]
   end
 
   def sort
-    @roster.each do |grade, students|
+    roster.each do |grade, students|
       students.sort!
     end
-    @roster
+    roster
   end
 end
