@@ -1,6 +1,5 @@
 # code here!
 class School
-
   def initialize(name)
     @name = name
     roster = {}
@@ -22,9 +21,7 @@ class School
   end
 
   def sort
-    roster.each do |grade, students|
-      students.sort!
-    end
+    roster.values.sort!
     roster
   end
 end
